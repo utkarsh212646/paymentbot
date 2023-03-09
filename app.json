@@ -1,0 +1,37 @@
+
+{
+  "name": "My Payment Bot",
+  "description": "A bot for processing payments on Telegram",
+  "repository": "https://github.com/myusername/my-payment-bot",
+  "keywords": ["telegram", "bot", "payment"],
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "env": {
+    "TELEGRAM_API_ID": {
+      "description": "The API ID for your Telegram account",
+      "required": true
+    },
+    "TELEGRAM_API_HASH": {
+      "description": "The API hash for your Telegram account",
+      "required": true
+    },
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "The bot token for your Telegram bot",
+      "required": true
+    },
+    "DATABASE_URL": {
+      "description": "The URL for your PostgreSQL database",
+      "required": true
+    },
+    "PAYMENT_PROVIDER_TOKEN": {
+      "description": "The token for your payment provider",
+      "required": true
+    }
+  }
+}
