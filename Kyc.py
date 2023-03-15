@@ -6,20 +6,20 @@ class User:
         self.name = name
         self.age = age
         self.address = address
-        self.id_number = id_number
+        self.cin_number = id_number
         self.is_verified = False
 
 class KYC_Bot:
     def __init__(self):
         self.users = []
 
-    def add_user(self, name, age, address, id_number):
-        user = User(name, age, address, id_number)
+    def add_user(self, name, age, address, cin_number):
+        user = User(name, age, address, cin_number)
         self.users.append(user)
 
-    def verify_user(self, id_number):
+    def verify_user(self, cin_number):
         for user in self.users:
-            if user.id_number == id_number:
+            if user. cin_number == cin_number:
                 user.is_verified = True
                 return True
         return False
@@ -43,11 +43,11 @@ while True:
         address = input("Enter your address: ")
         id_number = bot.generate_id()
         bot.add_user(name, age, address, id_number)
-        print("User added. Your ID number is:", id_number)
+        print("User added. Your cin number is:", id_number)
 
     elif choice == 2:
         id_number = int(input("Enter your ID number: "))
-        if bot.verify_user(id_number):
+        if bot.verify_user(cin_number):
             print("User verified. You can now access premium features.")
         else:
             print("User not found. Please try again.")
