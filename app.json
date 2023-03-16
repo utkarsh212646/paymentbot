@@ -101,7 +101,11 @@
           "address": "string",
           "id_number": "string",
           "verification_status": "string"
-        }
+       ],
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "The Telegram bot token for your KYC bot",
+      "required": tru
       }
     ]
   }
